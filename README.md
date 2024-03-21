@@ -1,33 +1,42 @@
+# Nextjs-Turso-Drizzle-Template
+
 This is a [Next.js](https://nextjs.org/) Templarte project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and configured further with [`Drizzle ORM`](https://orm.drizzle.team) and [`Turso`](https://turso.tech/).
 
 ## Getting Started
 
-First, Sign-up on [`Turso`](https://accounts.turso.tech/sign-in?webui=true) and Create a Database.
+- First, clone this repository and open the project in a code editor.
 
-Create a new `TOKEN` which will be used to connect to the database using drizzle orm.
+```bash
+git clone https://github.com/Navin-Jethwani-76/nextjs-turso-drizzle-template
+cd nextjs-turbo-drizzle-template && code .
+```
 
-Move `.env` to `.env.local` .
+- Sign-up on [`Turso`](https://accounts.turso.tech/sign-in?webui=true) and Create a Database.
+
+- Create a new `TOKEN` which will be used to connect to the database using drizzle orm.
+
+- Move `.env` to `.env.local` .
 
 ```bash
 mv .env .env.local
 ```
 
-Copy the `TOKEN` and `URL` displayed in the turso console and paste the values in `.env.local` file.
+- Copy the `TOKEN` and `URL` displayed in the turso console and paste the values in `.env.local` file.
 
 ```bash
-TURSO_DATABASE_URL=libsql://db-user.turso.io
+TURSO_DATABASE_URL=libsql://db-name-user-name.turso.io
 TURSO_DATABASE_AUTH_TOKEN=SECURE_TOKEN_VALUE
 ```
 
 ## Setting up the Database
 
-Install the dependencies
+- Install the dependencies
 
 ```bash
 npm install
 ```
 
-The template is already configured with a default table named `users`. To push the table in your database, run below commands in a terminal at root of the project
+- The template is already configured with a default table named `users`. To push the table in your database, run below commands in a terminal at root of the project
 
 - below command will generate a folder `migrations` inside `db`
 
@@ -41,27 +50,27 @@ npm run db:generate
 npm run db:migrate
 ```
 
-- below command will seed the database with some initial values
+- below command will seed the database with some initial values (only required once)
 
 ```bash
 npm run db:seed
 ```
 
-**_NOTE:_** You can create new Tables Schema inside `db/schema.ts` and run above commands to migrate the new changes.
+**_NOTE:_** You can create new Tables Schema inside `db/schema.ts` and run above commands `(except npm run db:seed)` to migrate the new changes.
 
 ## Starting the Server
 
-Now, run the development server:
+- Now, run the development server:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 
